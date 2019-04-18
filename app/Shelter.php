@@ -10,4 +10,5 @@ class Shelter extends Model
     public function animals(){
         return $this->hasMany('\App\Animal');
     }
+    protected $guarded = [];
 }
