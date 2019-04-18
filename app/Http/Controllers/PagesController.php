@@ -9,7 +9,7 @@ class PagesController extends Controller
     public function home()
     {
         # code...
-        $users = App\User::all();
+        $users = \App\User::all();
 
         return view('welcome', [
             'foo'=> 'bar',
@@ -19,7 +19,7 @@ class PagesController extends Controller
     }
 
     public function contact(){
-        $users = App\User::all();
+        $users = \App\User::all();
         return view('contact', compact('users'));
     }
 
