@@ -33,7 +33,7 @@
         methods: {
             getShelters(){
                 const vm = this
-                axios.get('/shelters').then(function(response){
+                axios.get('/api/shelters').then(function(response){
                     console.log({response})
                     vm.shelters = response.data
 

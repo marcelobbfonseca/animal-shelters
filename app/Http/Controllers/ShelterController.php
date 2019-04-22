@@ -19,7 +19,10 @@ class ShelterController extends Controller
         $shelter->animals;
         return $shelter;
     }
-    
+    public function shelter_page($id){
+        return view('shelter');
+    }
+
     public function store(Request $request)
     {
         $shelter = New Shelter();

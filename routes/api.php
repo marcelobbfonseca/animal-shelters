@@ -17,7 +17,7 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
 
-Route::get('/api/shelters', 
-    ['uses'=> 'ShelterController@getShelters']);
-Route::post('/api/shelters',
-    ['uses'=> 'ShelterController@postShelters']);
+// Route::get('/api/shelters', 
+//     ['uses'=> 'ShelterController@getShelters']);
+// Route::post('/api/shelters',
+//     ['uses'=> 'ShelterController@postShelters']);

@@ -1754,6 +1754,71 @@ module.exports = {
 
 /***/ }),
 
+/***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/AdoptionTable.vue?vue&type=script&lang=js&":
+/*!************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/AdoptionTable.vue?vue&type=script&lang=js& ***!
+  \************************************************************************************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+/* harmony default export */ __webpack_exports__["default"] = ({
+  name: 'AdoptionTable',
+  data: function data() {
+    return {
+      shelter: {
+        id: 1,
+        animals: []
+      }
+    };
+  },
+  mounted: function mounted() {
+    this.getAnimals();
+  },
+  methods: {
+    getAnimals: function getAnimals() {
+      var vm = this;
+      var shelter_id = window.location.pathname.split('/')[2];
+      axios.get('/api/shelters/' + shelter_id + '/animals').then(function (response) {
+        console.log({
+          response: response
+        });
+        vm.shelter = response.data;
+      })["catch"](function (error) {
+        console.log({
+          error: error
+        });
+      });
+    }
+  }
+});
+
+/***/ }),
+
 /***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/ExampleComponent.vue?vue&type=script&lang=js&":
 /*!***************************************************************************************************************************************************************************!*\
   !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/ExampleComponent.vue?vue&type=script&lang=js& ***!
@@ -1830,7 +1895,7 @@ __webpack_require__.r(__webpack_exports__);
   methods: {
     getShelters: function getShelters() {
       var vm = this;
-      axios.get('/shelters').then(function (response) {
+      axios.get('/api/shelters').then(function (response) {
         console.log({
           response: response
         });
@@ -37121,6 +37186,76 @@ exports.clearImmediate = (typeof self !== "undefined" && self.clearImmediate) ||
 
 /***/ }),
 
+/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/AdoptionTable.vue?vue&type=template&id=280cd4fb&":
+/*!****************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/AdoptionTable.vue?vue&type=template&id=280cd4fb& ***!
+  \****************************************************************************************************************************************************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "render", function() { return render; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return staticRenderFns; });
+var render = function() {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _c("div", [
+    _c("a", { staticClass: "btn btn-primary", attrs: { href: "/" } }, [
+      _vm._v("Back")
+    ]),
+    _vm._v(" "),
+    _c(
+      "div",
+      { staticClass: "row" },
+      _vm._l(_vm.shelter.animals, function(animal) {
+        return _c("div", { staticClass: "col-md-3" }, [
+          _c("div", { staticClass: "card", staticStyle: { width: "18rem" } }, [
+            _c("img", {
+              staticClass: "card-img-top",
+              attrs: {
+                src:
+                  "https://cdn.shopify.com/s/files/1/0255/4205/files/myths-about-rescue-dogs.jpg?v=1492082180",
+                alt: "Card image cap"
+              }
+            }),
+            _vm._v(" "),
+            _c("div", { staticClass: "card-body" }, [
+              _c("h5", { staticClass: "card-title" }, [
+                _vm._v(" " + _vm._s(animal.name) + " ")
+              ]),
+              _vm._v(" "),
+              _c("p", [_vm._v(_vm._s(animal.type))]),
+              _vm._v(" "),
+              _c("p", [_vm._v("Breed: " + _vm._s(animal.breed))]),
+              _vm._v(" "),
+              _c("p", [_vm._v("Size: " + _vm._s(animal.size))]),
+              _vm._v(" "),
+              _c("p", [_vm._v("Status: " + _vm._s(animal.status))]),
+              _vm._v(" "),
+              _c("p", [_vm._v("age: " + _vm._s(animal.years_old))]),
+              _vm._v(" "),
+              _c(
+                "a",
+                { staticClass: "btn btn-primary", attrs: { href: "#" } },
+                [_vm._v("Adopt")]
+              )
+            ])
+          ])
+        ])
+      }),
+      0
+    )
+  ])
+}
+var staticRenderFns = []
+render._withStripped = true
+
+
+
+/***/ }),
+
 /***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/ExampleComponent.vue?vue&type=template&id=299e239e&":
 /*!*******************************************************************************************************************************************************************************************************************!*\
   !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/ExampleComponent.vue?vue&type=template&id=299e239e& ***!
@@ -49401,6 +49536,7 @@ window.axios = __webpack_require__(/*! axios */ "./node_modules/axios/index.js")
 
 Vue.component('example-component', __webpack_require__(/*! ./components/ExampleComponent.vue */ "./resources/js/components/ExampleComponent.vue")["default"]);
 Vue.component('shelter-list', __webpack_require__(/*! ./components/SheltersList.vue */ "./resources/js/components/SheltersList.vue")["default"]);
+Vue.component('adoption-table', __webpack_require__(/*! ./components/AdoptionTable.vue */ "./resources/js/components/AdoptionTable.vue")["default"]);
 var app = new Vue({
   el: '#app',
   data: {
@@ -49465,6 +49601,75 @@ if (token) {
 //     cluster: process.env.MIX_PUSHER_APP_CLUSTER,
 //     encrypted: true
 // });
+
+/***/ }),
+
+/***/ "./resources/js/components/AdoptionTable.vue":
+/*!***************************************************!*\
+  !*** ./resources/js/components/AdoptionTable.vue ***!
+  \***************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _AdoptionTable_vue_vue_type_template_id_280cd4fb___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./AdoptionTable.vue?vue&type=template&id=280cd4fb& */ "./resources/js/components/AdoptionTable.vue?vue&type=template&id=280cd4fb&");
+/* harmony import */ var _AdoptionTable_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./AdoptionTable.vue?vue&type=script&lang=js& */ "./resources/js/components/AdoptionTable.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport *//* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
+
+
+
+
+
+/* normalize component */
+
+var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__["default"])(
+  _AdoptionTable_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
+  _AdoptionTable_vue_vue_type_template_id_280cd4fb___WEBPACK_IMPORTED_MODULE_0__["render"],
+  _AdoptionTable_vue_vue_type_template_id_280cd4fb___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
+  false,
+  null,
+  null,
+  null
+  
+)
+
+/* hot reload */
+if (false) { var api; }
+component.options.__file = "resources/js/components/AdoptionTable.vue"
+/* harmony default export */ __webpack_exports__["default"] = (component.exports);
+
+/***/ }),
+
+/***/ "./resources/js/components/AdoptionTable.vue?vue&type=script&lang=js&":
+/*!****************************************************************************!*\
+  !*** ./resources/js/components/AdoptionTable.vue?vue&type=script&lang=js& ***!
+  \****************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_AdoptionTable_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/babel-loader/lib??ref--4-0!../../../node_modules/vue-loader/lib??vue-loader-options!./AdoptionTable.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/AdoptionTable.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport */ /* harmony default export */ __webpack_exports__["default"] = (_node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_AdoptionTable_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
+
+/***/ }),
+
+/***/ "./resources/js/components/AdoptionTable.vue?vue&type=template&id=280cd4fb&":
+/*!**********************************************************************************!*\
+  !*** ./resources/js/components/AdoptionTable.vue?vue&type=template&id=280cd4fb& ***!
+  \**********************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_AdoptionTable_vue_vue_type_template_id_280cd4fb___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../node_modules/vue-loader/lib??vue-loader-options!./AdoptionTable.vue?vue&type=template&id=280cd4fb& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/AdoptionTable.vue?vue&type=template&id=280cd4fb&");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_AdoptionTable_vue_vue_type_template_id_280cd4fb___WEBPACK_IMPORTED_MODULE_0__["render"]; });
+
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_AdoptionTable_vue_vue_type_template_id_280cd4fb___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
+
+
 
 /***/ }),
 

@@ -22,6 +22,7 @@ window.axios = require('axios');
 
 Vue.component('example-component', require('./components/ExampleComponent.vue').default);
 Vue.component('shelter-list', require('./components/SheltersList.vue').default);
+Vue.component('adoption-table', require('./components/AdoptionTable.vue').default);
 
 const app = new Vue({
     el: '#app',

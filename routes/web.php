@@ -13,13 +13,14 @@
 
 
 Route::get('/', 'PagesController@home');
+Route::get('/shelters/{id}', 'ShelterController@shelter_page');
 
 Route::get('/contact', function(){
     return view('contact');
 });
-Route::get('/shelters', 'ShelterController@index');
-Route::get('/shelter/{id}/animals', 'ShelterController@show');
+// API routes
+Route::get('/api/shelters', 'ShelterController@index');
+Route::get('/api/shelters/{id}/animals', 'ShelterController@show');
 Route::apiResources([
     'animals' => 'AnimalsController',
-    'shelters' => 'ShelterController'
     ]);
