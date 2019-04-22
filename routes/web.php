@@ -19,5 +19,7 @@ Route::get('/contact', function(){
 });
 Route::get('/shelters', 'ShelterController@index');
 Route::get('/shelter/{id}/animals', 'ShelterController@show');
-# Route::get('/animals', 'AnimalController@index');
-Route::resource('animals', 'AnimalsController');
+Route::apiResources([
+    'animals' => 'AnimalsController',
+    'shelters' => 'ShelterController'
+    ]);
