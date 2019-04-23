@@ -1,0 +1,24 @@
+language: php
+
+php:
+  - 7.2.16
+
+services:
+  - postgres
+
+before_script:
+  - cp .env.travis .env
+  - postgres #install and create db. ref to image
+  -  composer self-update
+  - composer install --no-interaction
+  - npm install
+  - npm run production
+
+#testing
+# script:
+#   - vendor/bin/phpunit
+
+# notifications:
+#   slack:
+#     on_success: never
+#     on_fail: always
