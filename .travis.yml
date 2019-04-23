@@ -14,6 +14,8 @@ before_script:
   - npm install
   - npm run production
   - php artisan migrate
+  php artisan vendor:publish --provider="Encore\Admin\AdminServiceProvider"
+  - php artisan admin:install
 
 #testing
 script:
