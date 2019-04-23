@@ -17,12 +17,13 @@ before_script:
 
 #testing
 script:
-  - vendor/bin/phpunit
-# test:
-#   adapter: postgresql
-#   database: travis_ci_test
+  - vendor/bin/phpunit --coverage-clover=coverage.xml
 
-# notifications:
+after_success:
+  - bash <(curl -s https://codecov.io/bash)
+
+notifications:
+  email: false
 #   slack: iabs-brasilia:Fw9KR08fvWURvkuLnWWamoO0
 #   on_success: never
 #   on_fail: always
