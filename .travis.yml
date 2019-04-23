@@ -9,14 +9,15 @@ services:
 before_script:
   - psql -c 'create database shelter_test;' -U postgres
   - cp .env.travis .env
-  -  composer self-update
+  - composer self-update
   - composer install --no-interaction
-  - npm install
-  - npm run production
   - composer require encore/laravel-admin
   - php artisan vendor:publish --provider="Encore\Admin\AdminServiceProvider"
   - php artisan admin:install
+  - npm install
   - php artisan migrate
+  - npm run production
+
 
 #testing
 script:
