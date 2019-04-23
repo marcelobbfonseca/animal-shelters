@@ -9,12 +9,7 @@ class PagesController extends Controller
     public function home()
     {
         # code...
-        $users = \App\User::all();
-
-        return view('welcome', [
-            'foo'=> 'bar',
-            'users' => $users
-        ]);
+        return view('welcome');
 
     }
 
