@@ -13,9 +13,9 @@ before_script:
   - composer install --no-interaction
   - npm install
   - npm run production
-  - php artisan migrate
   - php artisan vendor:publish --provider="Encore\Admin\AdminServiceProvider"
   - php artisan admin:install
+  - php artisan migrate
 
 #testing
 script:
