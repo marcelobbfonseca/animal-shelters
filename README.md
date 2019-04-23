@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.com/marcelobbfonseca/animal-shelters.svg?branch=master)](https://travis-ci.com/marcelobbfonseca/animal-shelters) 
+
 # Backend example project
 
 Backend Laravel example project using laradock

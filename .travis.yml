@@ -15,8 +15,8 @@ before_script:
   - npm run production
 
 #testing
-# script:
-#   - vendor/bin/phpunit
+script:
+  - vendor/bin/phpunit
 # test:
 #   adapter: postgresql
 #   database: travis_ci_test
