@@ -4,9 +4,10 @@ php:
   - 7.2.16
 
 services:
-  - postgres
+  - postgresql
 
 before_script:
+  - psql -c 'create database shelter_test;' -U postgres
   - cp .env.travis .env
   - postgres #install and create db. ref to image
   -  composer self-update
@@ -17,6 +18,9 @@ before_script:
 #testing
 # script:
 #   - vendor/bin/phpunit
+# test:
+#   adapter: postgresql
+#   database: travis_ci_test
 
 # notifications:
 #   slack:
