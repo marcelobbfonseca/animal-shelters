@@ -9,7 +9,6 @@ services:
 before_script:
   - psql -c 'create database shelter_test;' -U postgres
   - cp .env.travis .env
-  - postgres #install and create db. ref to image
   -  composer self-update
   - composer install --no-interaction
   - npm install
