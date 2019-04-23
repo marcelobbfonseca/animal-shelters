@@ -22,7 +22,7 @@ script:
 #   adapter: postgresql
 #   database: travis_ci_test
 
-# notifications:
-#   slack:
-#     on_success: never
-#     on_fail: always
+notifications:
+  slack: iabs-brasilia:Fw9KR08fvWURvkuLnWWamoO0
+  on_success: never
+  on_fail: always
