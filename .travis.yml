@@ -20,10 +20,10 @@ before_script:
 
 #testing
 script:
-  - vendor/bin/phpunit --coverage-clover=coverage.xml
-
-after_success:
-  - bash <(curl -s https://codecov.io/bash)
+  - vendor/bin/phpunit  #--coverage-clover=coverage.xml
+# codecov
+# after_success:
+#   - bash <(curl -s https://codecov.io/bash)
 
 notifications:
   email: false
