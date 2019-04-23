@@ -13,6 +13,7 @@ before_script:
   - composer install --no-interaction
   - npm install
   - npm run production
+  - composer require encore/laravel-admin
   - php artisan vendor:publish --provider="Encore\Admin\AdminServiceProvider"
   - php artisan admin:install
   - php artisan migrate
