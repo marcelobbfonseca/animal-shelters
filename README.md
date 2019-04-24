@@ -7,10 +7,13 @@ Backend Laravel example project using laradock
 ## Run project
     Docker installed is required
     Clone project
+    run:
+```
     cd laradock/
     docker-compose up -d nginx postgres
-
-
+```
+    application will be running in localhost. No need to specify port.
+    Just type localhost in your browser.
 
 ## Docker commands
     docker-compose up -d nginx postgres # Run docker containers
