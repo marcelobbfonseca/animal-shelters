@@ -2,7 +2,7 @@
 
 # Backend example project
 
-Backend Laravel example project using laradock
+Laravel API example project using laradock and Vue
 
 ## Running project with docker
 
