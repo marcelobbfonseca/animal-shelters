@@ -4,6 +4,13 @@
 
 Backend Laravel example project using laradock
 
+## Run project
+    Docker installed is required
+    Clone project
+    cd laradock/
+    docker-compose up -d nginx postgres
+
+
 
 ## Docker commands
     docker-compose up -d nginx postgres # Run docker containers
