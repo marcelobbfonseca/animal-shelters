@@ -23,8 +23,8 @@ before_script:
 script:
   - vendor/bin/phpunit  #--coverage-clover=coverage.xml
 # codecov
-# after_success:
-#   - bash <(curl -s https://codecov.io/bash)
+after_success:
+  - bash <(curl -s https://codecov.io/bash)
 
 notifications:
   email: false
