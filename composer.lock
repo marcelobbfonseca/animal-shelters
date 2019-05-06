@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "3c8cc7ed849e60a85590746cfe9152f0",
+    "content-hash": "cfb7e19681bc5fc09c258efdd754995b",
     "packages": [
         {
             "name": "dnoegel/php-xdg-base-dir",
@@ -504,16 +504,16 @@
         },
         {
             "name": "encore/laravel-admin",
-            "version": "v1.6.11",
+            "version": "v1.6.15",
             "source": {
                 "type": "git",
                 "url": "https://github.com/z-song/laravel-admin.git",
-                "reference": "015a3c1d72eaeb1a1ec193789b50cc5e569dd71e"
+                "reference": "a4495a7278f3d5c679edaf92fd17b01a99b35717"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/z-song/laravel-admin/zipball/015a3c1d72eaeb1a1ec193789b50cc5e569dd71e",
-                "reference": "015a3c1d72eaeb1a1ec193789b50cc5e569dd71e",
+                "url": "https://api.github.com/repos/z-song/laravel-admin/zipball/a4495a7278f3d5c679edaf92fd17b01a99b35717",
+                "reference": "a4495a7278f3d5c679edaf92fd17b01a99b35717",
                 "shasum": ""
             },
             "require": {
@@ -527,7 +527,7 @@
                 "intervention/image": "~2.3",
                 "laravel/browser-kit-testing": "^2.0",
                 "laravel/laravel": "~5.5",
-                "phpunit/phpunit": "~6.0",
+                "phpunit/phpunit": "~6.0 || ~8.0",
                 "symfony/css-selector": "~3.1"
             },
             "suggest": {
@@ -571,7 +571,7 @@
                 "grid",
                 "laravel"
             ],
-            "time": "2019-04-04T09:22:37+00:00"
+            "time": "2019-05-06T10:57:07+00:00"
         },
         {
             "name": "erusev/parsedown",
